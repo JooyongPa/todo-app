@@ -35,7 +35,7 @@ const filteredTodos = todos.filter((todo) => {
 
 return (
     <div>
-      <h1>To-Do App</h1>
+      <h1>To-Do App 🔥</h1>
 
       <input
         value={input}
