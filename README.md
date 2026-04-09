@@ -14,7 +14,7 @@
 - Vercel
 
 ## 🌐 배포 링크
-https://여기에-본인-vercel-주소
+https://todo-app-rho-ivory-61.vercel.app/
 
 ## 📌 설명
 React의 useState를 활용하여 상태 관리와 CRUD 기능을 구현한 프로젝트입니다.
