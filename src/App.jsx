@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 function App() {
-
+  
   const [todos, setTodos] = useState(() => {
   const saved = localStorage.getItem("todos");
   return saved ? JSON.parse(saved) : [];
@@ -28,8 +28,8 @@ useEffect(() => {
 const [filter, setFilter] = useState("all");
 
 const filteredTodos = todos.filter((todo) => {
-  if (filter === "done") return todo.done;
-  if (filter === "notDone") return !todo.done;
+   if (filter === "active") return !todo.done;
+  if (filter === "completed") return todo.done;
   return true;
 });
 
@@ -46,8 +46,8 @@ return (
       <button onClick={addTodo}>추가</button>
       <div style={{ marginTop: "10px" }}>
   <button onClick={() => setFilter("all")}>전체</button>
-  <button onClick={() => setFilter("done")}>완료</button>
-  <button onClick={() => setFilter("notDone")}>미완료</button>
+<button onClick={() => setFilter("active")}>할 일</button>
+<button onClick={() => setFilter("completed")}>완료</button>
 </div>
 
 <ul style={{ listStyle: "none", padding: 0 }}>
